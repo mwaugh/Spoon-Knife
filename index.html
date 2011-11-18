@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
-  <title>Spoon-Knife</title>
+  <title>Spoon-Knife Mike Test</title>
   <style type="text/css">
     * {
       margin:0px;
@@ -39,11 +39,16 @@
 	function keydownHandler(e){
 		keyCodes.shift();
 		keyCodes.push(e.keyCode);
+
 		if(keyCodes.every(function(element, index, array){return element===pattern[index];})){
 			document.getElementById("rainbow-message").style.display="";
+		}else {
+			document.getElementById("rainbow-message").style.display="none";
 		}
 	}
 	window.onkeydown=keydownHandler;
+
+	
    </script>
 		
 </head>
